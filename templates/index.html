@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Underwater Target Detection</title>
+<style>
+    body {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.1);
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .form-row input[type="text"] {
+        width: 23%;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #333;
+        margin-left: 5px;
+        color: white;
+        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    .form-row input[type="text"]:focus {
+        outline: none;
+    }
+
+    .btn {
+        width: 100px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #114112; /* Green color */
+        color: white;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .container form {
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    input[type="submit"] {
+        margin-top: 20px;
+        background-color: #4CAF50;
+        padding: 10px;
+        border-radius: 15px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Underwater Target Detection</h1>
+    <form action="/predict" method="POST">
+        <div class="form-row">
+            <input type="text" name="freq1" placeholder="freq1 1">
+            <input type="text" name="freq2" placeholder="freq 2">
+            <input type="text" name="freq3" placeholder="freq 3">
+            <input type="text" name="freq4" placeholder="freq 4">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq5" placeholder="freq 5">
+            <input type="text" name="freq6" placeholder="freq 6">
+            <input type="text" name="freq7" placeholder="freq 7">
+            <input type="text" name="freq8" placeholder="freq 8">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq9" placeholder="freq 9">
+            <input type="text" name="freq10" placeholder="freq 10">
+            <input type="text" name="freq11" placeholder="freq 11">
+            <input type="text" name="freq12" placeholder="freq 12">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq13" placeholder="freq 13">
+            <input type="text" name="freq14" placeholder="freq 14">
+            <input type="text" name="freq15" placeholder="freq 15">
+            <input type="text" name="freq16" placeholder="freq 16">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq17" placeholder="freq 17">
+            <input type="text" name="freq18" placeholder="freq 18">
+            <input type="text" name="freq19" placeholder="freq 19">
+            <input type="text" name="freq20" placeholder="freq 20">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq21" placeholder="freq 21">
+            <input type="text" name="freq22" placeholder="freq 22">
+            <input type="text" name="freq23" placeholder="freq 23">
+            <input type="text" name="freq24" placeholder="freq 24">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq25" placeholder="freq 25">
+            <input type="text" name="freq26" placeholder="freq 26">
+            <input type="text" name="freq27" placeholder="freq 27">
+            <input type="text" name="freq28" placeholder="freq 28">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq29" placeholder="freq 29">
+            <input type="text" name="freq30" placeholder="freq 30">
+            <input type="text" name="freq31" placeholder="freq 31">
+            <input type="text" name="freq32" placeholder="freq 32">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq33" placeholder="freq 33">
+            <input type="text" name="freq34" placeholder="freq 34">
+            <input type="text" name="freq35" placeholder="freq 35">
+            <input type="text" name="freq36" placeholder="freq 36">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq37" placeholder="freq 37">
+            <input type="text" name="freq38" placeholder="freq 38">
+            <input type="text" name="freq39" placeholder="freq 39">
+            <input type="text" name="freq40" placeholder="freq 40">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq41" placeholder="freq 41">
+            <input type="text" name="freq42" placeholder="freq 42">
+            <input type="text" name="freq43" placeholder="freq 43">
+            <input type="text" name="freq44" placeholder="freq 44">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq45" placeholder="freq 45">
+            <input type="text" name="freq46" placeholder="freq 46">
+            <input type="text" name="freq47" placeholder="freq 47">
+            <input type="text" name="freq48" placeholder="freq 48">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq49" placeholder="freq 49">
+            <input type="text" name="freq50" placeholder="freq 50">
+            <input type="text" name="freq51" placeholder="freq 51">
+            <input type="text" name="freq52" placeholder="freq 52">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq53" placeholder="freq 53">
+            <input type="text" name="freq54" placeholder="freq 54">
+            <input type="text" name="freq55" placeholder="freq 55">
+            <input type="text" name="freq56" placeholder="freq 56">
+        </div>
+        <div class="form-row">
+            <input type="text" name="freq57" placeholder="freq 57">
+            <input type="text" name="freq58" placeholder="freq 58">
+            <input type="text" name="freq59" placeholder="freq 59">
+            <input type="text" name="freq60" placeholder="freq 60">
+        </div>
+        <button class="btn">Predict Here</button>
+    </form>
+
+    {% if prediction %}
+    <div>
+        <h2 style="color: rgb(68, 246, 14);">Prediction: {{ prediction }}</h2>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
